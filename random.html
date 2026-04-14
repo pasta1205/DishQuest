@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Dish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="random.css" />
+  </head>
+  <body data-page="random">
+    <div class="recipe-finder-container">
+      <div class="page-topbar">
+        <a href="index.html" class="home-link">Back To Home</a>
+      </div>
+
+      <section class="page-hero">
+        <p class="hero-label">Random Mode</p>
+        <h1>Get A Random Recipe Instantly</h1>
+        <p class="hero-text">
+          This page generates random recipe ideas directly when it opens. Use
+          the button below if you want a fresh set.
+        </p>
+      </section>
+
+      <section class="page-card">
+        <div class="random-button-container" id="random-button-container">
+          <button id="random-button" class="random-button">
+            Generate New Random Dish
+          </button>
+        </div>
+      </section>
+
+      <div class="message" id="message-area">
+        Generating random recipe ideas for you...
+      </div>
+
+      <div class="results-grid" id="results-grid"></div>
+    </div>
+
+    <div class="modal-container hidden" id="recipe-modal">
+      <div class="modal-content">
+        <button id="modal-close-btn" class="modal-close-btn">+</button>
+        <div id="recipe-details-content"></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
