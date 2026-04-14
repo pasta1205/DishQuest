@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search By Dish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="search.css" />
+  </head>
+  <body data-page="search">
+    <div class="recipe-finder-container">
+      <div class="page-topbar">
+        <a href="index.html" class="home-link">Back To Home</a>
+      </div>
+
+      <section class="page-hero">
+        <p class="hero-label">Search Mode</p>
+        <h1>Find A Dish By Name</h1>
+        <p class="hero-text">
+          Enter a dish name and get Gemini-generated recipe cards with process,
+          ingredients, real image lookup, and recipe video links.
+        </p>
+      </section>
+
+      <section class="page-card">
+        <form id="search-form" class="search-box search-box-page">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search by dish name (eg. paneer butter masala)"
+          />
+          <button type="submit" id="search-button">Get Process</button>
+        </form>
+      </section>
+
+      <div class="message" id="message-area">
+        Search for any dish to Begin.
+      </div>
+
+      <div class="results-grid" id="results-grid"></div>
+    </div>
+
+    <div class="modal-container hidden" id="recipe-modal">
+      <div class="modal-content">
+        <button id="modal-close-btn" class="modal-close-btn">+</button>
+        <div id="recipe-details-content"></div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
