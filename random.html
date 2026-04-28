@@ -13,27 +13,32 @@
     <link rel="stylesheet" href="random.css" />
   </head>
   <body data-page="random">
+    <!--wraps entire page content center control padding-->
     <div class="recipe-finder-container">
+      <!--Header-->
       <div class="page-topbar">
+        <!--takes to index page-->
         <a href="index.html" class="home-link">Back To Home</a>
       </div>
 
-      <section class="page-hero">
+      <div class="page-hero">
         <p class="hero-label">Random Mode</p>
         <h1>Get A Random Recipe Instantly</h1>
         <p class="hero-text">
           This page generates random recipe ideas directly when it opens. Use
           the button below if you want a fresh set.
         </p>
-      </section>
+      </div>
 
-      <section class="page-card">
+      <!--Random dish generate button-->
+      <div class="page-card">
         <div class="random-button-container" id="random-button-container">
           <button id="random-button" class="random-button">
             Generate New Random Dish
           </button>
         </div>
-      </section>
+      </div>
+
 
       <div class="message" id="message-area">
         Generating random recipe ideas for you...
@@ -41,9 +46,11 @@
 
       <div class="results-grid" id="results-grid"></div>
     </div>
-
+    <!--For the whole screen popup-->
     <div class="modal-container hidden" id="recipe-modal">
+      <!--For the white center box-->
       <div class="modal-content">
+        <!--close the popup-->
         <button id="modal-close-btn" class="modal-close-btn">+</button>
         <div id="recipe-details-content"></div>
       </div>
