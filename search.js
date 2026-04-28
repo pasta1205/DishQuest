@@ -1,4 +1,4 @@
-// DOM elements
+// DOM elements were selected from the HTML
 const form = document.getElementById("search-form");
 const input = document.getElementById("search-input");
 const grid = document.getElementById("results-grid");
@@ -8,25 +8,29 @@ const modal = document.getElementById("recipe-modal");
 const content = document.getElementById("recipe-details-content");
 const closeBtn = document.getElementById("modal-close-btn");
 
-// recipes storage
+// An array was created to store fetched recipes
 let recipes = [];
 
-// form submission handler
+// A submit event listener was added to handle form submission
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const query = input.value.trim();
 
+  // Input validation was performed
   if (!query) {
     showMessage("Enter a dish name", true);
     return;
   }
 
+  // A searching message was displayed to the user
   showMessage(`Searching for "${query}"...`);
 
+  // Recipes were fetched based on the user query
   const data = await getRecipes(query);
   recipes = data;
 
+  // Result handling was done based on fetched data
   if (data.length === 0) {
     showMessage("No recipes found", true);
   } else {
@@ -36,21 +40,24 @@ form.addEventListener("submit", async (e) => {
 });
 
 
-// FETCH RECIPES FROM THEMEALDB
+// RECIPES WERE FETCHED FROM THEMEALDB API
 async function getRecipes(query) {
   try {
+    // API request was sent to TheMealDB
     const res = await fetch(
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
     );
 
     const data = await res.json();
 
+    // Checked if meals existed in response
     if (!data.meals) return [];
 
+    // API data was transformed into a cleaner format
     return data.meals.map(meal => {
       const ingredients = [];
 
-      // extract ingredients + measures
+      // Ingredients and measurements were extracted
       for (let i = 1; i <= 20; i++) {
         const ing = meal[`strIngredient${i}`];
         const measure = meal[`strMeasure${i}`];
@@ -60,6 +67,7 @@ async function getRecipes(query) {
         }
       }
 
+      // A structured recipe object was returned
       return {
         name: meal.strMeal,
         cuisine: meal.strArea || "Global",
@@ -72,6 +80,7 @@ async function getRecipes(query) {
     });
 
   } catch (error) {
+    // Errors were handled and logged
     console.error(error);
     showMessage("Error fetching recipes", true);
     return [];
@@ -79,10 +88,11 @@ async function getRecipes(query) {
 }
 
 
-// DISPLAY RECIPES IN GRID
+// RECIPES WERE DISPLAYED IN THE GRID
 function showRecipes(data) {
   grid.innerHTML = "";
 
+  // Each recipe card was created dynamically
   data.forEach((r, i) => {
     const div = document.createElement("div");
     div.className = "recipe-item";
@@ -101,13 +111,14 @@ function showRecipes(data) {
 }
 
 
-// CLICK EVENT FOR RECIPE DETAILS
+// CLICK EVENT WAS ADDED TO SHOW RECIPE DETAILS
 grid.addEventListener("click", (e) => {
   const card = e.target.closest(".recipe-item");
   if (!card) return;
 
   const r = recipes[card.dataset.i];
 
+  // Recipe details were injected into the modal
   content.innerHTML = `
     <h2>${r.name}</h2>
 
@@ -124,18 +135,21 @@ grid.addEventListener("click", (e) => {
     </ol>
   `;
 
+  // Modal was displayed
   modal.classList.remove("hidden");
 });
 
 
-// CLOSE MODAL
+// MODAL CLOSE FUNCTIONALITY WAS ADDED
 closeBtn.addEventListener("click", () => {
   modal.classList.add("hidden");
 });
 
 
-// MESSAGE FUNCTION
+// MESSAGE DISPLAY FUNCTION WAS CREATED
 function showMessage(msg, isError = false) {
   messageArea.textContent = msg;
+
+  // Message color was set based on error state
   messageArea.style.color = isError ? "red" : "black";
 }
