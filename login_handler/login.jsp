@@ -140,7 +140,6 @@
       text-decoration: none;
     }
     .switch-link a:hover { text-decoration: underline; }
-    }
   </style>
 </head>
 <body>
