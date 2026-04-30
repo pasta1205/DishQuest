@@ -49,17 +49,17 @@
       border-radius: 999px;
       background-color: rgba(76,175,80,0.14);
       color: var(--primary-color);
-      font-size: 0.85rem;
+      font-size: 13.6px;
       font-weight: 600;
       margin-bottom: 10px;
     }
     .brand h1 {
-      font-size: 1.9rem;
+      font-size: 30.4px;
       font-weight: 700;
       letter-spacing: -0.5px;
     }
     .brand p {
-      font-size: 0.92rem;
+      font-size: 14.72px;
       color: #5c6770;
       margin-top: 6px;
     }
@@ -70,7 +70,7 @@
       color: var(--error-color);
       padding: 10px 14px;
       border-radius: 8px;
-      font-size: 0.875rem;
+      font-size: 14px;
       margin-bottom: 18px;
     }
 
@@ -79,7 +79,7 @@
     }
     label {
       display: block;
-      font-size: 0.85rem;
+      font-size: 13.6px;
       font-weight: 600;
       margin-bottom: 6px;
       color: var(--text-dark);
@@ -90,7 +90,7 @@
       border: 1.5px solid #dde3e7;
       border-radius: 12px;
       font-family: "Poppins", sans-serif;
-      font-size: 0.95rem;
+      font-size: 15.2px;
       background: #fff;
       color: var(--text-dark);
       transition: border-color 0.2s;
@@ -99,7 +99,7 @@
     input:focus { border-color: var(--primary-color); }
 
     .hint {
-      font-size: 0.78rem;
+      font-size: 12.48px;
       color: #8a9399;
       margin-top: 4px;
     }
@@ -111,7 +111,7 @@
       background: linear-gradient(135deg, #43a047 0%, #66bb6a 100%);
       color: #fff;
       font-family: "Poppins", sans-serif;
-      font-size: 1rem;
+      font-size: 16px;
       font-weight: 600;
       border: none;
       border-radius: 14px;
@@ -127,7 +127,7 @@
     .switch-link {
       text-align: center;
       margin-top: 20px;
-      font-size: 0.88rem;
+      font-size: 14.08px;
       color: #5c6770;
     }
     .switch-link a {
