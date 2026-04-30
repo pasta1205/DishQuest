@@ -31,7 +31,7 @@
 - **HTML5** – Page structure  
 - **CSS3** – Styling & responsive design  
 - **JavaScript (Vanilla JS)** – Functionality  
-- **Gemini API (gemini-3-flash-preview)** – AI integration  
+- **MEAL DB** – API   
 
 ---
 
