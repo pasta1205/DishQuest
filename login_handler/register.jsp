@@ -146,7 +146,7 @@
 
 <div class="auth-card">
   <div class="brand">
-    <div class="brand-badge">Gemini Recipe Assistant</div>
+    <div class="brand-badge">Recipe Assistant</div>
     <h1>Create Account</h1>
     <p>Join DishQuest to start discovering recipes</p>
   </div>

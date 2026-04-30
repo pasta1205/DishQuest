@@ -150,7 +150,7 @@
 
 <div class="auth-card">
   <div class="brand">
-    <div class="brand-badge">Gemini Recipe Assistant</div>
+    <div class="brand-badge">Recipe Assistant</div>
     <h1>DishQuest</h1>
     <p>Sign in to continue exploring recipes</p>
   </div>
