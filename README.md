@@ -4,7 +4,7 @@
 ![HTML](https://img.shields.io/badge/HTML-5-orange)
 ![CSS](https://img.shields.io/badge/CSS-3-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
-![API](https://img.shields.io/badge/API-Gemini-green)
+![API](https://www.themealdb.com/api/json/v1/1/random.php)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 ---
@@ -21,7 +21,7 @@
 - 🥕 Find recipes using available ingredients  
 - 🎲 Generate random recipes instantly  
 - 📖 View detailed recipe instructions in a modal  
-- 💬 AI-powered suggestions using Gemini API  
+- 💬 Recipies suggestions using MEALDB API  
 - 🎨 Clean, responsive, and user-friendly UI  
 
 ---
