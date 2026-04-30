@@ -136,10 +136,6 @@
       text-decoration: none;
     }
     .switch-link a:hover { text-decoration: underline; }
-
-    @media (max-width: 500px) {
-      .auth-card { padding: 32px 22px; }
-    }
   </style>
 </head>
 <body>
